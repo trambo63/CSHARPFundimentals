@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace _01_TypesAndVariables
@@ -48,6 +49,40 @@ namespace _01_TypesAndVariables
             Console.WriteLine(stringArray[0]);
             stringArray[0] = "Hey there";
             Console.WriteLine(stringArray[0]);
+
+            //Lists
+            List<string> listOfString = new List<string>();
+            List<int> listOfIntegers = new List<int>();
+            listOfString.Add("42");
+            listOfIntegers.Add(42);
+            Console.WriteLine(listOfIntegers[0]);
+
+            //Queues
+            Queue<string> firstInFirstOut = new Queue<string>();
+            firstInFirstOut.Enqueue("I'm first!");
+            firstInFirstOut.Enqueue("I'm next!");
+            Console.WriteLine(firstInFirstOut);
+            string firstItem = firstInFirstOut.Dequeue();
+            Console.WriteLine(firstItem);
+
+            //Dictionaries
+            Dictionary<int, string> keyAndValue = new Dictionary<int, string>();
+            keyAndValue.Add(7,"Agent");
+            string valueSeven = keyAndValue[7];
+            Console.WriteLine(valueSeven);
+
+            //other examples
+            SortedList<int, string> sortedKeyAndValue = new SortedList<int, string>();
+            HashSet<int> unipueList = new HashSet<int>();
+            Stack<string> lastInFirstOut = new Stack<string>();
+        }
+
+        [TestMethod]
+        public void Classes()
+        {
+            Random rng = new Random();
+            int randomNumber = rng.Next(1,100);
+            Console.WriteLine(randomNumber);
         }
     }
 }
