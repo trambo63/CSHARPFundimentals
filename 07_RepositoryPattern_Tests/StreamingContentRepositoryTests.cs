@@ -47,7 +47,7 @@ namespace _07_RepositoryPattern_Tests
         public void Arrange()
         {
             _repo = new StreamingContentRepository();
-            _content = new StreamingContent("Oceans 8", "do crime?", 100, MaturityRating.PG_13, true, GenreType.Action);
+            _content = new StreamingContent("Oceans 8", "do crime?", 100, MaturityRating.PG_13, GenreType.Action);
             _repo.AddContentToDirectory(_content);
         }
         [TestMethod]
@@ -65,7 +65,7 @@ namespace _07_RepositoryPattern_Tests
         public void UpdateExistingContent_ShouldReturnTure()
         {
             //Arrange
-            StreamingContent updatedContent = new StreamingContent("Italian Job", "do crime?", 100, MaturityRating.PG_13, true, GenreType.Action);
+            StreamingContent updatedContent = new StreamingContent("Italian Job", "do crime?", 100, MaturityRating.PG_13, GenreType.Action);
             //Act
             bool updateResult = _repo.UpdateExistingContent("oceans 8", updatedContent);
             //Assert

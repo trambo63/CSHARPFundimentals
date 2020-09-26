@@ -9,6 +9,7 @@ namespace _07_RepositoryPattern_Repository
 {
     public class StreamingContentRepository : StreamingContent
     {
+        //This is a fake database
         protected readonly List<StreamingContent> _contentDirectory = new List<StreamingContent>();
         //CRUD Create Read Update Delete
 

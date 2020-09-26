@@ -1,4 +1,5 @@
 ﻿using _08_StreamingContent_Console.UI;
+using _10_StreamingContent_UIRefactor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,11 @@ namespace _08_StreamingContent_Console
     {
         static void Main(string[] args)
         {
-            ProgramUI ui = new ProgramUI();
+
+            IConsole console = new RealConsole();
+            ProgramUI ui = new ProgramUI(console);
             ui.Run();
+
         }
     }
 }

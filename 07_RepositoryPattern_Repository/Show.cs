@@ -15,8 +15,18 @@ namespace _07_RepositoryPattern_Repository
         public double AverageRunTime { get; set; }
 
         public List<Episode> Episode { get; set; } = new List<Episode>();
+        //public Show() { }
 
+        //public Show(string title, string description, float starRating, MaturityRating mRating, bool isFamFriendly, GenreType tOG, int seasonCount, int episodeCount, double averageRunTime)
+        //    //:base instead of make constructors again
+        //    : base(title, description, starRating, mRating, isFamFriendly, tOG)
+        //{
+        //    SeasonCount = seasonCount;
+        //    EpisodeCount = episodeCount;
+        //    AverageRunTime = averageRunTime;
+        //}
     }
+
 
     public class Episode
     {
@@ -26,4 +36,5 @@ namespace _07_RepositoryPattern_Repository
 
         public int SeasonNumber { get; set; }
     }
+
 }

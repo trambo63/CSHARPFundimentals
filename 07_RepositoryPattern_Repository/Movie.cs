@@ -13,9 +13,9 @@ namespace _07_RepositoryPattern_Repository
         //Empty Movie Constructor
         public Movie() {}
 
-        public Movie(string title, string description, float starRating, MaturityRating mRating, bool isFamFriendly, GenreType tOG, double runTime)
+        public Movie(string title, string description, float starRating, MaturityRating mRating, GenreType tOG, double runTime)
             //:base instead of make constructors again
-            :base(title, description, starRating, mRating, isFamFriendly, tOG)
+            :base(title, description, starRating, mRating, tOG)
         {
             RunTime = runTime;
         }

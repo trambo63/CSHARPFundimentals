@@ -49,6 +49,23 @@ namespace _07_RepositoryPattern_Repository
             return allShow;
         }
 
+        public List<Movie> GetAllMovies()
+        {
+            //pull one item and see if it is a show
+            List<Movie> allMovie = new List<Movie>();
+            //pull one item and see if it is a show
+            //make sure to save that off to the side
+            foreach (StreamingContent content in _contentDirectory)
+            {
+                if (content is Movie)
+                {
+                    allMovie.Add((Movie)content);
+                }
+            }
+            //return that list
+            return allMovie;
+        }
+
         public Show GetShowByStarRating(float starRating)
         {
             foreach (StreamingContent content in _contentDirectory)

@@ -44,14 +44,14 @@ namespace _07_RepositoryPattern_Repository
                         return false;
                 }
                 //Alt 
-                if ((int)MaturityRating <= 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                //if ((int)MaturityRating <= 1)
+                //{
+                //    return true;
+                //}
+                //else
+                //{
+                //    return false;
+                //}
             }
         }
         //Making our enum a property
@@ -59,7 +59,7 @@ namespace _07_RepositoryPattern_Repository
 
         public StreamingContent() { }
         //Constructors
-        public StreamingContent(string title, string description, float starRating, MaturityRating mRating, bool famFriendly, GenreType tOG)
+        public StreamingContent(string title, string description, float starRating, MaturityRating mRating, GenreType tOG)
         {
             Title = title;
             Description = description;
